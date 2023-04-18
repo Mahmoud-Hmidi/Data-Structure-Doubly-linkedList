@@ -8,6 +8,6 @@ public class Main {
         dl.add_haed(40);
         dl.add_tail(50);
         dl.print_data_head();
-        dl.clear();
+        
     }// end function main ()
 }// end class Main
