@@ -1,5 +1,6 @@
+
 public class DoublyLinkedList<T> {
-    private  class  Node<T>{
+   private class  Node<T>{
         Node next;
         Node previous;
         T item;
@@ -12,7 +13,7 @@ public class DoublyLinkedList<T> {
     int size=0;
     public DoublyLinkedList(){
 
-    }// counstractor
+    }// counstrator
 
     public  void add_haed(T item){
         Node new_node=new Node<>(item);
@@ -39,6 +40,23 @@ public class DoublyLinkedList<T> {
             tail=new_node;
         }//end else
     }// end function add_tail()
+
+    public void remove_head(){
+       head=head.next;
+        size--;
+    }// end function remove_head ()
+    public void remove_tail(){
+        tail=tail.previous;
+        tail.next=null;
+        size--;
+    }// end function remove_tail()
+    public boolean isEmpty(){
+        if (head==null){
+            return true;
+        }else {
+            return false;
+        }
+    }// end function isEmpty ()
 
     public void print_data_head(){
         Node current=head;
